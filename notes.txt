@@ -1,0 +1,20 @@
+- Faltam X dias
+- Menu
+    - Home
+        - TOPO
+            - Carrosel de fotos (que podem ser alteradas com UI)
+            - 
+    - Nossa história
+    - Local
+    - Lista de presentes
+    - Confirmar presença
+    - Recados (blog, posts....)
+
+- convidados vão receber um QR code no convite + código para autenticar e Confirmar
+    presença.
+    Porém podemos enviar links para que possam confirmar presença também.
+
+- Criar listas e gerar convites para impressão
+
+- Poder editar todas as fotos, textos e paleta de cores
+
