@@ -4,12 +4,21 @@ import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
+import myTheme from './values/theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
+const theme = createTheme(myTheme.getTheme());
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <ThemeProvider theme={theme}>
+        <CssBaseline/>
+        <App />
+      </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
