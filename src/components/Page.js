@@ -1,9 +1,14 @@
 import React from 'react';
+import Menu from './Menu';
+
+import headerBg1 from '../images/header1.jpg'
 
 function HeaderFull(props) {
     return (
         <div style={styles.header_full}>
-            <img style={{height: '100%', width: '100%', objectFit: 'cover'}} src="images/header1.jpg" />
+            <div style={styles.header_full_image}>
+                <Menu />
+            </div>
         </div>
     )
 }
@@ -11,7 +16,7 @@ function HeaderFull(props) {
 function Header(props) {
     return (
         <div style={styles.header}>
-            
+            <Menu />
         </div>
     )
 }
@@ -48,9 +53,21 @@ const styles = {
         alignItems: 'center',
         display: 'flex',
     },    
+    header_full_image: {
+        backgroundImage: `url(${headerBg1})`, 
+        height: '100%', 
+        width: '100%', 
+        backgroundPosition: 'center', 
+        backgroundRepeat: 'no-repeat', 
+        backgroundSize: 'cover',
+        flex: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-end'
+    },
     header: {
-        backgroundColor: '#FF0', //! DELETE
-        height: '10%',
+        backgroundColor: '#F00', //! DELETE
+        minHeight: '10%',
     },
     content: {
         backgroundColor: '#0FF', //! DELETE
