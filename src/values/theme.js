@@ -14,7 +14,7 @@ const light = {
         background: {
             paper: "#FFFFFF",
             default: "#d2dce8"
-        }
+        }        
     }, 
 }
 
@@ -37,6 +37,8 @@ const dark = {
 const customColors = {
     color1: "#0b0b0b",
     color2: "#d2dce8",
+    textContrast: "#FFF",
+    backgroundContrast: "#000",
 }
 
 export default {
@@ -47,9 +49,7 @@ export default {
     getStyle: () => {
         return style
     },
-    getCustomColors: () => {
-        return customColors
-    }
+    customColors,
     /*
     setStyle: (style) => {
         style = style

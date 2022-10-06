@@ -2,11 +2,13 @@ import React from 'react';
 import Menu from './Menu';
 
 import headerBg1 from '../images/header1.jpg'
+import Logo from './Logo';
 
 function HeaderFull(props) {
     return (
         <div style={styles.header_full}>
             <div style={styles.header_full_image}>
+                <Logo />
                 <Menu />
             </div>
         </div>
@@ -41,7 +43,6 @@ function Page({fullHeader, children}) {
 
 const styles = {
     main: {
-        backgroundColor: '#F00', //! DELETE
         display: 'flex',
         flex: 1,
         flexDirection: 'column',
@@ -70,7 +71,6 @@ const styles = {
         minHeight: '10%',
     },
     content: {
-        backgroundColor: '#0FF', //! DELETE
         flex: 1,
     },
     footer: {
