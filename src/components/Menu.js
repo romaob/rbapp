@@ -4,6 +4,7 @@ import routes from '../values/routes'
 import DrawerMenu from './DrawerMenu'
 import MenuItem from './MenuItem'
 import MenuIcon from '@mui/icons-material/Menu';
+import { useHistory, useNavigate } from "react-router-dom";
 
 function MiniMenuToggle({toggleMenu}) {
   return (
@@ -34,11 +35,8 @@ export function Items({style, onSelect, align, dark}) {
 }
 
 export default function Menu() {
+  const navigate = useNavigate();
   const [showDrawer, setShowDrawer] = React.useState(false);
-
-  function navigate(route){
-
-  }
 
   return (
     <div style={{}}>
