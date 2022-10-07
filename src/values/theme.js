@@ -9,7 +9,7 @@ const light = {
             main: amber[400]
         },
         secondary: {
-            main: lightGreen["A700"]
+            main: grey["A200"]
         },
         background: {
             paper: "#FFFFFF",
@@ -25,7 +25,7 @@ const dark = {
             main: amber[400]
         },
         secondary: {
-            main: lightGreen["A700"]
+            main: grey["A700"]
         },
         background: {
             paper: grey[900],

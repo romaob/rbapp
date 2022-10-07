@@ -1,4 +1,4 @@
-import { IconButton } from '@mui/material'
+import { Box, IconButton } from '@mui/material'
 import React from 'react'
 import routes from '../values/routes'
 import DrawerMenu from './DrawerMenu'
@@ -9,14 +9,14 @@ import { useHistory, useNavigate } from "react-router-dom";
 function MiniMenuToggle({toggleMenu}) {
   return (
     <IconButton
-      style={{position: 'absolute', top: 20, left: 20}}
+      style={{position: 'absolute', top: 5, left: 20}}
       color="inherit"
       aria-label="Menu"
       edge="start"
       onClick={toggleMenu}
-      sx={{ mr: 2, display: { sm: 'none' } }}
+      sx={{ mr: 2, display: { md: 'none' } }}
     >
-      <MenuIcon color='secondary'/>
+      <MenuIcon color='secondary' sx={{ fontSize: 36 }}/>
     </IconButton>
   )
 }
@@ -25,11 +25,11 @@ export function Items({style, onSelect, align, dark}) {
   return (
     <div style={style}>
         <MenuItem label={'Home'} onClick={() => onSelect(routes.HOME)} align={align} dark={dark}/>
-        <MenuItem label={'Os Noivos'} onClick={() => onSelect(routes.NOIVOS)} align={align} dark={dark}/>
-        <MenuItem label={'O Evento'}  onClick={() => onSelect(routes.EVENTO)} align={align} dark={dark}/>
-        <MenuItem label={'Confirmar Presença'}  onClick={() => onSelect(routes.CONFIRMAR_PRESENCA)} align={align} dark={dark}/>
-        <MenuItem label={'Lista de Presentes'}  onClick={() => onSelect(routes.LISTA_PRESENTES)} align={align}dark={dark}/>
-        <MenuItem label={'Recados'}  onClick={() => onSelect(routes.RECADOS)} align={align} dark={dark}/>
+        <MenuItem label={'Os Noivos'} onClick={() => onSelect(routes.ABOUT)} align={align} dark={dark}/>
+        <MenuItem label={'O Evento'}  onClick={() => onSelect(routes.EVENT)} align={align} dark={dark}/>
+        <MenuItem label={'Confirmar Presença'}  onClick={() => onSelect(routes.CONFIRMATION)} align={align} dark={dark}/>
+        <MenuItem label={'Lista de Presentes'}  onClick={() => onSelect(routes.GIFTS_LIST)} align={align}dark={dark}/>
+        <MenuItem label={'Recados'}  onClick={() => onSelect(routes.BLOG)} align={align} dark={dark}/>
     </div>
   )
 }
@@ -39,12 +39,14 @@ export default function Menu() {
   const [showDrawer, setShowDrawer] = React.useState(false);
 
   return (
-    <div style={{}}>
+    <div style={{minHeight: 50}}>
         {!showDrawer &&
           <MiniMenuToggle toggleMenu={() => setShowDrawer(!showDrawer)}/>
         }
-        <Items dark style={{display: 'flex', alignContent: 'center', justifyContent: 'center', }} onSelect={navigate}/>
-        <DrawerMenu onClose={() => setShowDrawer(false)} visible={showDrawer}/>
+        <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+          <Items dark style={{display: 'flex', alignContent: 'center', justifyContent: 'center', }} onSelect={navigate}/>
+        </Box>
+        <DrawerMenu onClose={() => setShowDrawer(false)} visible={showDrawer} navigate={navigate} />
     </div>
   )
 }

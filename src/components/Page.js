@@ -3,6 +3,8 @@ import Menu from './Menu';
 
 import headerBg1 from '../images/header1.jpg'
 import Logo from './Logo';
+import theme from '../values/theme';
+import { Typography } from '@mui/material';
 
 function HeaderFull(props) {
     return (
@@ -18,7 +20,10 @@ function HeaderFull(props) {
 function Header(props) {
     return (
         <div style={styles.header}>
-            <Menu />
+            <div style={styles.header_full_image}>
+                <Logo small/>
+                <Menu />
+            </div>
         </div>
     )
 }
@@ -35,7 +40,8 @@ function Page({fullHeader, children}) {
                 {children}             
             </div>
             <div style={styles.footer}>
-                FOOTER
+                <Typography color="whitesmoke" variant='h5'>Romão & Brunna</Typography>
+                <Typography color="whitesmoke">06 de Maio de 2023</Typography>
             </div>            
         </div>
     );
@@ -48,7 +54,6 @@ const styles = {
         flexDirection: 'column',
     },    
     header_full: {
-        backgroundColor: '#FF0', //! DELETE
         height: '60%',
         justifyContent: 'center',
         alignItems: 'center',
@@ -67,14 +72,14 @@ const styles = {
         justifyContent: 'flex-end'
     },
     header: {
-        backgroundColor: '#F00', //! DELETE
         minHeight: '10%',
     },
     content: {
         flex: 1,
     },
     footer: {
-        backgroundColor: '#00F', //! DELETE
+        backgroundColor: theme.customColors.backgroundContrast,
+        padding: 10,
     }
 }
 

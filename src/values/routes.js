@@ -1,10 +1,10 @@
 const routes = {
    HOME: '/',
-   NOIVOS: '/noivos',
-   EVENTO: '/evento',
-   CONFIRMAR_PRESENCA: '/confirme',
-   LISTA_PRESENTES: '/listadepresentes',
-   RECADOS: '/recados'
+   ABOUT: '/about',
+   EVENT: '/event',
+   CONFIRMATION: '/confirmation',
+   GIFTS_LIST: '/giftslist',
+   BLOG: '/blog'
 }
 
 export default routes;

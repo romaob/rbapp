@@ -6,7 +6,7 @@ import Page from '../components/Page';
 function Home(props) {
     return (
         <Page fullHeader>
-        Home
+            Home
         </Page>
     );
 }
