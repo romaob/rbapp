@@ -42,10 +42,12 @@ function Page({fullHeader, children}) {
             {fullHeader && <HeaderFull />}
             {!fullHeader && <Header />}
             
-            <div style={styles.content}>
-                CONTENT
-                {children}             
+            <div style={{ flex: 1, display: 'flex', justifyContent: 'center'}}>
+                <div style={styles.content}>
+                    {children}             
+                </div>
             </div>
+
             <div style={styles.footer}>
                 <Typography color="whitesmoke" variant='h5'>Romão & Brunna</Typography>
                 <Typography color="whitesmoke">06 de Maio de 2023</Typography>
@@ -62,6 +64,7 @@ const styles = {
     },    
     header_full: {
         height: '60%',
+        minHeight: '60%',
         justifyContent: 'center',
         alignItems: 'center',
         display: 'flex',
@@ -82,7 +85,8 @@ const styles = {
         minHeight: '10%',
     },
     content: {
-        flex: 1,
+        padding: 20,
+        width: '80%',
     },
     footer: {
         backgroundColor: theme.customColors.backgroundContrast,
