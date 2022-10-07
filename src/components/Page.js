@@ -6,6 +6,8 @@ import Logo from './Logo';
 import theme from '../values/theme';
 import { Typography } from '@mui/material';
 
+import { motion } from 'framer-motion';
+
 function HeaderFull(props) {
     return (
         <div style={styles.header_full}>
@@ -30,7 +32,12 @@ function Header(props) {
 
 function Page({fullHeader, children}) {
     return (
-        <div style={styles.main}>
+        <motion.div 
+            style={styles.main} 
+            initial={{width: 0}}
+            animate={{width: "100%"}}
+            exit={{width: 0, transition: {duration: 0.2}}}
+        >
             
             {fullHeader && <HeaderFull />}
             {!fullHeader && <Header />}
@@ -43,14 +50,14 @@ function Page({fullHeader, children}) {
                 <Typography color="whitesmoke" variant='h5'>Romão & Brunna</Typography>
                 <Typography color="whitesmoke">06 de Maio de 2023</Typography>
             </div>            
-        </div>
+        </motion.div>
     );
 }
 
 const styles = {
     main: {
+        width: '100%',
         display: 'flex',
-        flex: 1,
         flexDirection: 'column',
     },    
     header_full: {
