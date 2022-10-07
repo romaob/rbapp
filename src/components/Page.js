@@ -86,7 +86,8 @@ const styles = {
     },
     content: {
         padding: 20,
-        width: '80%',
+        width: '100%',
+        maxWidth: 1024,
     },
     footer: {
         backgroundColor: theme.customColors.backgroundContrast,

@@ -16,6 +16,10 @@ export default function InfoPanel({img, children, reverse, style, infoStyle}) {
             <div style={{
                 display: 'flex',
                 alignItems: 'center',
+                maxWidth: '40%',
+                overflow: 'hidden',
+                justifyContent: 'center',
+                alignItems: 'center',
             }}>
                 {img}
             </div>
