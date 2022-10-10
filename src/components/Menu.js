@@ -39,7 +39,7 @@ export default function Menu() {
   const [showDrawer, setShowDrawer] = React.useState(false);
 
   return (
-    <div style={{minHeight: 50}}>
+    <div style={{minHeight: 0}}>
         {!showDrawer &&
           <MiniMenuToggle toggleMenu={() => setShowDrawer(!showDrawer)}/>
         }

@@ -9,15 +9,15 @@ export default function Logo({small}) {
         fontSize: 48,
         color: theme.customColors.textContrast,
         display: 'flex',
+        flexDirection: 'row',
         justifyContent: small ? 'flex-start' : 'center',
         alignItems: 'center',
-        paddingTop: 10,
         paddingLeft: small ? 75 : 20,
         paddingRight: 20,
       }}>
-        <Typography variant={small ? 'h4' : 'h2'}>{strings.title_short}</Typography>
-        {small &&
-          <Typography variant={small ? 'h6' : 'h4'} style={{marginLeft: 10}}> / {strings.date_plain}</Typography>
+        <img alt='Romão & Brunna' src={require('../images/art/romaobrunna-transp-dark.png')} style={{width: "40%", minWidth: small ? 300 : 400, maxWidth: 1000, paddingLeft: 10, paddingRight: 10}}/>
+        {small && 2 < 1 &&
+          <Typography variant={small ? 'h6' : 'h4'} style={{flex: 1, textAlign: 'right'}}>{strings.date_plain}</Typography>
         }
     </div>
   )

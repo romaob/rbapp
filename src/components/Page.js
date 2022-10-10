@@ -1,7 +1,7 @@
 import React from 'react';
 import Menu from './Menu';
 
-import headerBg1 from '../images/header1.jpg'
+import headerBg1 from '../images/testimages/torre.jpeg'
 import Logo from './Logo';
 import theme from '../values/theme';
 import { Typography } from '@mui/material';
@@ -42,7 +42,12 @@ function Page({fullHeader, children}) {
             {fullHeader && <HeaderFull />}
             {!fullHeader && <Header />}
             
-            <div style={{ flex: 1, display: 'flex', justifyContent: 'center'}}>
+            <div style={{ 
+                flex: 1, 
+                display: 'flex', 
+                justifyContent: 'center',
+                boxShadow: '0 -10px 50px -5px rgba(0,0,0,0.7)'
+            }}>
                 <div style={styles.content}>
                     {children}             
                 </div>
@@ -70,7 +75,8 @@ const styles = {
         display: 'flex',
     },    
     header_full_image: {
-        backgroundImage: `url(${headerBg1})`, 
+        backgroundColor: theme.customColors.backgroundContrast,
+       //backgroundImage: `url(${headerBg1})`, 
         height: '100%', 
         width: '100%', 
         backgroundPosition: 'center', 
