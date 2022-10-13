@@ -37,6 +37,8 @@ const dark = {
 const customColors = {
     color1: "#0b0b0b",
     color2: "#d2dce8",
+    azulSerenity: "#80abdb",
+    rose: "#eb949e",
     textContrast: "#FFF",
     backgroundContrast: "#000",
 }

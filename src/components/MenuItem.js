@@ -15,8 +15,9 @@ export default function MenuItem({label, onClick, align, dark}) {
         alignItems: 'center',
         flex: 1,
         fontSize: 20,
-        cursor: 'pointer'
-    }} onClick={onClick}>
+        cursor: 'pointer',
+        fontFamily: 'Quicksand, courier, sans-serif',
+    }} onClick={onClick} >
         {label}
     </div>
   )

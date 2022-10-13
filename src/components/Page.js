@@ -1,17 +1,21 @@
 import React from 'react';
 import Menu from './Menu';
 
-import headerBg1 from '../images/testimages/torre.jpeg'
+//import headerBg1 from '../images/testimages/torre.jpeg'
 import Logo from './Logo';
 import theme from '../values/theme';
 import { Typography } from '@mui/material';
 
 import { motion } from 'framer-motion';
+import strings from '../values/strings';
+
+const headerBg1 = 'https://iso.500px.com/wp-content/uploads/2014/07/big-one.jpg';
 
 function HeaderFull(props) {
     return (
         <div style={styles.header_full}>
             <div style={styles.header_full_image}>
+                <p style={{fontSize: 18, fontFamily: 'Quicksand', color: '#FFF'}}>{strings.date_plain}</p>
                 <Logo />
                 <Menu />
             </div>
@@ -54,8 +58,9 @@ function Page({fullHeader, children}) {
             </div>
 
             <div style={styles.footer}>
-                <Typography color="whitesmoke" variant='h5'>Romão & Brunna</Typography>
-                <Typography color="whitesmoke">06 de Maio de 2023</Typography>
+                <img src={require('../images/art/rb-logo-white.png')} style={{width: 250}} />
+                <Typography color="whitesmoke" style={{fontFamily: '"Pinyon Script", courier'}}>{strings.date_plain}</Typography>
+                <Typography color="whitesmoke" style={{fontFamily: '"Pinyon Script", courier'}}>Desenhado pelo noivo</Typography>
             </div>            
         </motion.div>
     );
@@ -73,13 +78,14 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         display: 'flex',
+        backgroundColor: '#000',
     },    
     header_full_image: {
-        backgroundColor: theme.customColors.backgroundContrast,
-       //backgroundImage: `url(${headerBg1})`, 
+        //backgroundColor: theme.customColors.backgroundContrast,
+        backgroundImage: `url(${headerBg1})`, 
         height: '100%', 
         width: '100%', 
-        backgroundPosition: 'center', 
+        backgroundPosition: 'center 30%', 
         backgroundRepeat: 'no-repeat', 
         backgroundSize: 'cover',
         flex: 1,
