@@ -8,6 +8,7 @@ import { Typography } from '@mui/material';
 
 import { motion } from 'framer-motion';
 import strings from '../values/strings';
+import values from '../values';
 
 const headerBg1 = 'https://iso.500px.com/wp-content/uploads/2014/07/big-one.jpg';
 
@@ -58,9 +59,9 @@ function Page({fullHeader, children}) {
             </div>
 
             <div style={styles.footer}>
-                <img src={require('../images/art/rb-logo-white.png')} style={{width: 250}} />
-                <Typography color="whitesmoke" style={{fontFamily: '"Pinyon Script", courier'}}>{strings.date_plain}</Typography>
-                <Typography color="whitesmoke" style={{fontFamily: '"Pinyon Script", courier'}}>Desenhado pelo noivo</Typography>
+                <img alt='' src={require('../images/art/rb-logo-white.png')} style={{width: 128}} />
+                <Typography color="whitesmoke" style={{fontSize: 18, fontFamily: values.fonts.primary}}>{strings.date_plain}</Typography>
+                <Typography color="whitesmoke" style={{fontSize: 12, fontFamily: values.fonts.primary}}>Desenhado pelo noivo</Typography>
             </div>            
         </motion.div>
     );
@@ -71,6 +72,7 @@ const styles = {
         width: '100%',
         display: 'flex',
         flexDirection: 'column',
+        flex: 1,
     },    
     header_full: {
         height: '60%',
@@ -94,9 +96,10 @@ const styles = {
         justifyContent: 'flex-end'
     },
     header: {
-        minHeight: '10%',
     },
     content: {
+        flex: 1,
+        display: 'flex',
         padding: 20,
         width: '100%',
         maxWidth: 1024,

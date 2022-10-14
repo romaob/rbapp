@@ -2,7 +2,6 @@ import React from 'react'
 
 import Drawer from '@mui/material/Drawer';
 import { Items } from './Menu';
-import theme from '../values/theme';
 
 export default function DrawerMenu({visible, onClose, navigate}) {
 

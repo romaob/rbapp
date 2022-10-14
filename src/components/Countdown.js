@@ -2,7 +2,9 @@ import React from 'react'
 import values from '../values'
 import theme from '../values/theme'
 
-function CountDownItem({label, value}) {
+function CountDownItem(props) {
+  const {label, value, fontColor, backgroundColor, bordered} = props;
+
     return (
         <div style={{
             display: 'flex',
@@ -12,26 +14,28 @@ function CountDownItem({label, value}) {
             margin: 5,
         }}>
             <div style={{
-              fontSize: 32, 
+              fontSize: 24, 
               display: 'flex',
               fontWeight: 'bold', 
-              width: 75,
-              height: 75,
+              width: 50,
+              height: 50,
               alignItems: 'center',
               justifyContent: 'center',
+              border: bordered ? `1px solid ${fontColor}` : 'none',
               borderRadius: 50,
               margin: 5,
-              color: theme.customColors.textContrast,
-              backgroundColor: theme.customColors.rose,}}
+              color: fontColor ?? theme.customColors.textContrast,
+              backgroundColor: bordered ? 'transparent' : backgroundColor ?? theme.customColors.rose,}}
             >
               {value}
             </div>
-            <div style={{fontSize: 16}}>{label}</div>
+            <div style={{fontSize: 16, color: bordered ? fontColor : backgroundColor}}>{label}</div>
         </div>
     )
 }
 
-export default function Countdown() {
+export default function Countdown(props) {
+const {label, value, fontColor, backgroundColor, bordered} = props;
 const [currentDate, setCurrentDate] = React.useState(null)
 const [countDow, setCountDow] = React.useState(null)
 
@@ -59,10 +63,10 @@ React.useEffect(() => {
 
   return (
     <div style={{display: 'flex', justifyContent: 'center'}}>
-      <CountDownItem label="Dias" value={countDow?.days} />
-      <CountDownItem label="Horas" value={countDow?.hours} />
-      <CountDownItem label="Min" value={countDow?.minutes} />
-      <CountDownItem label="Seg" value={countDow?.seconds} />  
+      <CountDownItem label="Dias" value={countDow?.days} fontColor={fontColor} backgroundColor={backgroundColor} bordered={bordered}/>
+      <CountDownItem label="Horas" value={countDow?.hours} fontColor={fontColor} backgroundColor={backgroundColor} bordered={bordered}/>
+      <CountDownItem label="Min" value={countDow?.minutes} fontColor={fontColor} backgroundColor={backgroundColor} bordered={bordered}/>
+      <CountDownItem label="Seg" value={countDow?.seconds} fontColor={fontColor} backgroundColor={backgroundColor} bordered={bordered}/>
     </div>
   )
 }

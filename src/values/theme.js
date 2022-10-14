@@ -3,6 +3,14 @@ import { amber, grey, lightGreen } from "@mui/material/colors"
 let style = 'light'
 
 const light = {    
+    typography: {
+        fontFamily: 'Quicksand, Roboto, sans-serif',
+        fontSize: 16,
+        fontWeightLight: 300,
+        fontWeightRegular: 400,
+        fontWeightMedium: 500,
+        fontWeightBold: 700,
+    },
     palette:{
         mode: 'light',
         primary: {
@@ -13,7 +21,7 @@ const light = {
         },
         background: {
             paper: "#FFFFFF",
-            default: "#d2dce8"
+            default: "#D4D9E1"
         }        
     }, 
 }
