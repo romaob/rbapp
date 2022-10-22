@@ -21,7 +21,7 @@ const light = {
         },
         background: {
             paper: "#FFFFFF",
-            default: "#D4D9E1"
+            default: "#EEF1F6"
         }        
     }, 
 }
@@ -46,6 +46,7 @@ const customColors = {
     color1: "#0b0b0b",
     color2: "#d2dce8",
     azulSerenity: "#80abdb",
+    azulDark: "#274C8F",
     rose: "#eb949e",
     textContrast: "#FFF",
     backgroundContrast: "#000",

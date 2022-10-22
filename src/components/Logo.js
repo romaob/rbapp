@@ -16,7 +16,31 @@ export default function Logo({small}) {
         paddingLeft: small ? 75 : 10,
         paddingRight: 10,
       }}>
-        <img alt='Romão & Brunna' src={require('../images/art/romaobrunna-transp-dark.png')} style={{width: "45%", minWidth: small ? 275 : 375, maxWidth: 1000, paddingLeft: 10, paddingRight: 10}}/>
+        <div style={{
+          color: theme.customColors.azulDark,
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+        }}>          
+          <div>
+            <Typography variant='h1' style={{fontFamily: 'Pinyon Script'}}>
+              Romão
+            </Typography>
+            <div style={{
+              display: 'flex',
+              flexDirection: 'row',
+            }}>
+              <Typography variant='h1' style={{fontFamily: 'Luxurious Script', marginRight: 20}}>
+                &
+              </Typography>
+              <Typography variant='h1' style={{fontFamily: 'Pinyon Script'}}>
+                Brunna
+              </Typography>
+            </div>
+          </div>
+        </div>
     </div>
   )
 }

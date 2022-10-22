@@ -6,7 +6,7 @@ export default function MenuItem({label, onClick, align, dark}) {
 
   return (
     <div style={{
-        color: dark ? theme.customColors.textContrast : undefined,
+        color: dark ? theme.customColors.azulDark : undefined,
         padding: 10,
         margin: 10,
         maxWidth: 170,

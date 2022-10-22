@@ -16,7 +16,11 @@ function HeaderFull(props) {
     return (
         <div style={styles.header_full}>
             <div style={styles.header_full_image}>
-                <p style={{fontSize: 18, fontFamily: 'Quicksand', color: '#FFF'}}>{strings.date_plain}</p>
+                <p style={{
+                    fontSize: 22, 
+                    fontFamily: 'Quicksand', 
+                    color: theme.customColors.azulDark
+                }}>{strings.date_plain}</p>
                 <Logo />
                 <Menu />
             </div>
@@ -51,7 +55,7 @@ function Page({fullHeader, children}) {
                 flex: 1, 
                 display: 'flex', 
                 justifyContent: 'center',
-                boxShadow: '0 -10px 50px -5px rgba(0,0,0,0.7)'
+                //boxShadow: '0 -10px 50px -5px rgba(0,0,0,0.7)'
             }}>
                 <div style={styles.content}>
                     {children}             
@@ -80,11 +84,11 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         display: 'flex',
-        backgroundColor: '#000',
+        //backgroundColor: '#000',
     },    
     header_full_image: {
         //backgroundColor: theme.customColors.backgroundContrast,
-        backgroundImage: `url(${headerBg1})`, 
+        //backgroundImage: `url(${headerBg1})`, 
         height: '100%', 
         width: '100%', 
         backgroundPosition: 'center 30%', 

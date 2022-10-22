@@ -5,6 +5,7 @@ import DrawerMenu from './DrawerMenu'
 import MenuItem from './MenuItem'
 import MenuIcon from '@mui/icons-material/Menu';
 import { useHistory, useNavigate } from "react-router-dom";
+import theme from '../values/theme'
 
 function MiniMenuToggle({toggleMenu}) {
   return (
@@ -43,8 +44,14 @@ export default function Menu() {
         {!showDrawer &&
           <MiniMenuToggle toggleMenu={() => setShowDrawer(!showDrawer)}/>
         }
-        <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-          <Items dark style={{display: 'flex', alignContent: 'center', justifyContent: 'center', }} onSelect={navigate}/>
+        <Box sx={{ display: { xs: 'none', md: 'block' } }} style={{paddingLeft: 20, paddingRight: 20}}>
+          <Items dark style={{
+            display: 'flex', 
+            alignContent: 'center', 
+            justifyContent: 'center', 
+            borderTop: '2px solid', 
+            borderColor: theme.customColors.azulDark
+          }} onSelect={navigate}/>
         </Box>
         <DrawerMenu onClose={() => setShowDrawer(false)} visible={showDrawer} navigate={navigate} />
     </div>
