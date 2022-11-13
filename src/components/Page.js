@@ -4,14 +4,47 @@ import Menu from './Menu';
 //import headerBg1 from '../images/testimages/torre.jpeg'
 import Logo from './Logo';
 import theme from '../values/theme';
-import { Typography } from '@mui/material';
+import { Paper, Typography } from '@mui/material';
 
 import { motion } from 'framer-motion';
 import strings from '../values/strings';
 import values from '../values';
 
-const headerBg1 = 'https://iso.500px.com/wp-content/uploads/2014/07/big-one.jpg';
+//const headerBg1 = 'https://iso.500px.com/wp-content/uploads/2014/07/big-one.jpg';
 
+export function Title({children}) {
+    return (
+        <Typography 
+            style={{
+                //textShadow: '0 3px 3px rgba(0,0,0,0.2)',
+                fontweight: 'bold',
+                marginBottom: 30,
+                textAlign: 'Left',
+            }}
+            variant='h4' 
+            color='secondary'
+            >
+            {children}
+        </Typography>
+    )
+}
+
+export function TopicTitle({children}) {
+    return (
+        <Typography
+            style={{
+                fontweight: 'bold',
+                paddingTop: 10,
+                paddingBottom: 10,
+            }}
+            variant='h5'
+            fontWeight={700}
+            color={theme.customColors.textMain}>
+            {children}
+        </Typography>
+    )
+}
+ 
 function HeaderFull(props) {
     return (
         <div style={styles.header_full}>
@@ -31,7 +64,7 @@ function HeaderFull(props) {
 function Header(props) {
     return (
         <div style={styles.header}>
-            <div style={styles.header_full_image}>
+            <div style={styles.header_full_image}>                
                 <Logo small/>
                 <Menu />
             </div>
@@ -39,7 +72,7 @@ function Header(props) {
     )
 }
 
-function Page({fullHeader, children}) {
+function Page({fullHeader, children, title}) {
     return (
         <motion.div 
             style={styles.main} 
@@ -57,15 +90,24 @@ function Page({fullHeader, children}) {
                 justifyContent: 'center',
                 //boxShadow: '0 -10px 50px -5px rgba(0,0,0,0.7)'
             }}>
-                <div style={styles.content}>
-                    {children}             
-                </div>
+                    <div style={styles.content}>
+                        <Paper style={{padding: 10}}>
+                            {title && <Title>{title}</Title>}
+                            {children}      
+                        </Paper>       
+                    </div>
             </div>
 
             <div style={styles.footer}>
-                <img alt='' src={require('../images/art/rb-logo-white.png')} style={{width: 128}} />
-                <Typography color="whitesmoke" style={{fontSize: 18, fontFamily: values.fonts.primary}}>{strings.date_plain}</Typography>
-                <Typography color="whitesmoke" style={{fontSize: 12, fontFamily: values.fonts.primary}}>Desenhado pelo noivo</Typography>
+                <div style={{
+                    width: '100%',
+                    borderBottom: '2px solid', 
+                    borderColor: theme.customColors.azulDark,
+                    marginBottom: 20,
+                }}></div>
+                <img alt='' src={require('../images/art/rb-logo-blue.png')} style={{width: 148}} />
+                <Typography style={{fontSize: 18, fontFamily: values.fonts.primary, color: theme.customColors.azulDark}}>{strings.date_plain}</Typography>
+                <Typography style={{fontSize: 12, fontFamily: values.fonts.primary,  color: theme.customColors.azulDark}}>Desenhado pelo noivo</Typography>
             </div>            
         </motion.div>
     );
@@ -81,6 +123,7 @@ const styles = {
     header_full: {
         height: '60%',
         minHeight: '60%',
+        marginBottom: 30,
         justifyContent: 'center',
         alignItems: 'center',
         display: 'flex',
@@ -100,6 +143,7 @@ const styles = {
         justifyContent: 'flex-end'
     },
     header: {
+        display: 'flex',
     },
     content: {
         flex: 1,
@@ -107,10 +151,11 @@ const styles = {
         padding: 20,
         width: '100%',
         maxWidth: 1024,
+        flexDirection: 'column',
     },
     footer: {
-        backgroundColor: theme.customColors.backgroundContrast,
-        padding: 10,
+        //backgroundColor: theme.customColors.backgroundContrast,
+        padding: 20,
     }
 }
 

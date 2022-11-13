@@ -11,36 +11,62 @@ export default function Logo({small}) {
         color: theme.customColors.textContrast,
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: small ? 'flex-start' : 'center',
+        justifyContent: 'center',
         alignItems: 'center',
-        paddingLeft: small ? 75 : 10,
-        paddingRight: 10,
+        paddingLeft: 20,
+        paddingRight: 20,
       }}>
         <div style={{
           color: theme.customColors.azulDark,
+          flex: 1,
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'center',
           alignItems: 'center',
           flexWrap: 'wrap',
-        }}>          
+        }}>       
+        {!small ? (
           <div>
-            <Typography variant='h1' style={{fontFamily: 'Pinyon Script'}}>
+            <Typography style={{fontFamily: 'Pinyon Script'}} color='primary' fontSize={theme.sizes.headerFontSize}>
               Romão
             </Typography>
             <div style={{
               display: 'flex',
               flexDirection: 'row',
             }}>
-              <Typography variant='h1' style={{fontFamily: 'Luxurious Script', marginRight: 20}}>
+              <Typography style={{fontFamily: 'Luxurious Script', marginRight: 20}} fontSize={theme.sizes.headerFontSize}>
                 &
               </Typography>
-              <Typography variant='h1' style={{fontFamily: 'Pinyon Script'}}>
+              <Typography style={{fontFamily: 'Pinyon Script'}} fontSize={theme.sizes.headerFontSize}>
                 Brunna
               </Typography>
             </div>
           </div>
+        ) : (
+          <div style={{display: 'flex', height: 64, alignItems: 'center'}}>
+            <Typography style={{fontFamily: 'Pinyon Script'}} color='primary' fontSize={theme.sizes.headerFontSizeSmall}>
+              Romão
+            </Typography>
+            <div style={{
+              display: 'flex',
+              flexDirection: 'row',
+            }}>
+              <Typography style={{fontFamily: 'Luxurious Script', marginRight: 20, marginLeft: 20}} fontSize={theme.sizes.headerFontSizeSmall}>
+                &
+              </Typography>
+              <Typography style={{fontFamily: 'Pinyon Script'}} fontSize={theme.sizes.headerFontSizeSmall}>
+                Brunna
+              </Typography>
+            </div>
+          </div>
+        )}
         </div>
+
+      <div style={{
+          width: '100%',
+          borderBottom: '2px solid', 
+          borderColor: theme.customColors.azulDark,
+      }}></div>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import { amber, grey, lightGreen } from "@mui/material/colors"
+import { amber, grey, blue, lightBlue } from "@mui/material/colors"
 
 let style = 'light'
 
@@ -6,18 +6,14 @@ const light = {
     typography: {
         fontFamily: 'Quicksand, Roboto, sans-serif',
         fontSize: 16,
-        fontWeightLight: 300,
-        fontWeightRegular: 400,
-        fontWeightMedium: 500,
-        fontWeightBold: 700,
     },
     palette:{
         mode: 'light',
         primary: {
-            main: amber[400]
+            main: '#274C8F',
         },
         secondary: {
-            main: grey["A200"]
+            main: "#eb949e"
         },
         background: {
             paper: "#FFFFFF",
@@ -49,16 +45,21 @@ const customColors = {
     azulDark: "#274C8F",
     rose: "#eb949e",
     textContrast: "#FFF",
+    textMain: "#3d3f4d",
+    background: "#EEF1F6",
     backgroundContrast: "#000",
 }
-
-export default {
+const theme = {
     getTheme: () => {
         if(style === 'light') return light
         return dark
     },
     getStyle: () => {
         return style
+    },
+    sizes: {
+        headerFontSize: 80,
+        headerFontSizeSmall: 36,
     },
     customColors,
     /*
@@ -67,3 +68,5 @@ export default {
     },
     */
 }
+
+export default theme;

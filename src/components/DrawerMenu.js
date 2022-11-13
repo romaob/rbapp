@@ -11,7 +11,11 @@ export default function DrawerMenu({visible, onClose, navigate}) {
       open={visible}
       onClose={onClose}
     >
-      <Items onSelect={navigate} align='left' style={{display: 'flex', flexDirection: 'column'}}/>
+      <Items onSelect={navigate} align='left'
+        style={{
+          display: 'flex', 
+          flexDirection: 'column',
+        }}/>
     </Drawer>
   )
 }

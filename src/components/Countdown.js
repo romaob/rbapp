@@ -8,21 +8,21 @@ function CountDownItem(props) {
     return (
         <div style={{
             display: 'flex',
+            flex: 1,
             flexDirection: 'column',
             alignItems: 'center',
-            justifyContent: 'center',
             margin: 5,
         }}>
             <div style={{
-              fontSize: 24, 
+              fontSize: 32, 
+              width: '100%',
+              height: 75,
               display: 'flex',
               fontWeight: 'bold', 
-              width: 50,
-              height: 50,
               alignItems: 'center',
               justifyContent: 'center',
+              boxShadow: bordered ? 'none' : '0px 2px 5px 0px rgba(0,0,0,0.2)',
               border: bordered ? `1px solid ${fontColor}` : 'none',
-              borderRadius: 50,
               margin: 5,
               color: fontColor ?? theme.customColors.textContrast,
               backgroundColor: bordered ? 'transparent' : backgroundColor ?? theme.customColors.rose,}}

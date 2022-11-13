@@ -1,4 +1,4 @@
-import { Box, IconButton } from '@mui/material'
+import { Box, Button, IconButton } from '@mui/material'
 import React from 'react'
 import routes from '../values/routes'
 import DrawerMenu from './DrawerMenu'
@@ -26,7 +26,7 @@ export function Items({style, onSelect, align, dark}) {
   return (
     <div style={style}>
         <MenuItem label={'Home'} onClick={() => onSelect(routes.HOME)} align={align} dark={dark}/>
-        <MenuItem label={'Os Noivos'} onClick={() => onSelect(routes.ABOUT)} align={align} dark={dark}/>
+        <MenuItem label={'Nossa História'} onClick={() => onSelect(routes.ABOUT)} align={align} dark={dark}/>
         <MenuItem label={'O Evento'}  onClick={() => onSelect(routes.EVENT)} align={align} dark={dark}/>
         <MenuItem label={'Confirmar Presença'}  onClick={() => onSelect(routes.CONFIRMATION)} align={align} dark={dark}/>
         <MenuItem label={'Lista de Presentes'}  onClick={() => onSelect(routes.GIFTS_LIST)} align={align}dark={dark}/>
@@ -49,8 +49,6 @@ export default function Menu() {
             display: 'flex', 
             alignContent: 'center', 
             justifyContent: 'center', 
-            borderTop: '2px solid', 
-            borderColor: theme.customColors.azulDark
           }} onSelect={navigate}/>
         </Box>
         <DrawerMenu onClose={() => setShowDrawer(false)} visible={showDrawer} navigate={navigate} />
