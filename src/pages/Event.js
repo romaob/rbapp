@@ -38,10 +38,10 @@ export default function Event() {
           paddingBottom: 10,
         }}>
           <TimeEventNode ballText={'16:30'} topless>
-            Entrada dos convidados
+            Recepção
           </TimeEventNode>
           <TimeEventNode  ballText={'17:30'}>
-            Inicio da cerimônia
+            Cerimônia
           </TimeEventNode>
           <TimeEventNode ballText={'19:30'}>
             Coquetel
@@ -69,10 +69,10 @@ export default function Event() {
           flexDirection: 'row',
         }}>
           <TimeEventNodeHorizontal ballText={'16:30'} leftless>
-            Entrada dos convidados
+            Recepção
           </TimeEventNodeHorizontal>
           <TimeEventNodeHorizontal  ballText={'17:30'}>
-            Inicio da cerimônia
+            Cerimônia
           </TimeEventNodeHorizontal>
           <TimeEventNodeHorizontal ballText={'19:30'}>
             Coquetel
