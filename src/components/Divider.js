@@ -1,12 +1,12 @@
 import React from 'react'
 
-export default function Divider({width, invisible, style}) {
+export default function Divider({width, invisible, color, style}) {
   return (
     <div style={{
-        height: 1,
-        backgroundColor: !invisible ? 'rgba(0,0,0,0.5)' : 'transparent',
+        height: 3,
+        backgroundColor: !invisible ? (color ?? 'rgba(0,0,0,0.5)') : 'transparent',
         margin: 10,
-        width: width ?? '80%',
+        width: width ?? '95%',
         ...style
     }}/>
   )

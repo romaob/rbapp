@@ -18,6 +18,10 @@ const light = {
         background: {
             paper: "#FFFFFF",
             default: "#EEF1F6"
+        },
+        text: {
+            primary: "#3D3D3D",
+            secondary: "#3D3D3D"
         }        
     }, 
 }

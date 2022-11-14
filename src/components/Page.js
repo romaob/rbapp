@@ -29,7 +29,7 @@ export function Title({children}) {
     )
 }
 
-export function TopicTitle({children}) {
+export function TopicTitle({children, textAlign}) {
     return (
         <Typography
             style={{
@@ -38,6 +38,7 @@ export function TopicTitle({children}) {
                 paddingBottom: 10,
             }}
             variant='h5'
+            textAlign={textAlign}
             fontWeight={700}
             color={theme.customColors.textMain}>
             {children}
@@ -91,7 +92,7 @@ function Page({fullHeader, children, title}) {
                 //boxShadow: '0 -10px 50px -5px rgba(0,0,0,0.7)'
             }}>
                     <div style={styles.content}>
-                        <Paper style={{padding: 10}}>
+                        <Paper style={{padding: 15}}>
                             {title && <Title>{title}</Title>}
                             {children}      
                         </Paper>       
