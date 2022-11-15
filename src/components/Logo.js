@@ -26,21 +26,23 @@ export default function Logo({small}) {
           flexWrap: 'wrap',
         }}>       
         {!small ? (
-          <div>
+          <div style={{
+            display: 'flex',
+          }}>
             <Typography style={{fontFamily: 'Pinyon Script'}} color='primary' fontSize={theme.sizes.headerFontSize}>
               Romão
             </Typography>
-            <div style={{
-              display: 'flex',
-              flexDirection: 'row',
-            }}>
-              <Typography style={{fontFamily: 'Luxurious Script', marginRight: 20}} fontSize={theme.sizes.headerFontSize}>
+            
+                 <Typography style={{
+                    fontFamily: 'Luxurious Script', 
+                    marginRight: 20,
+                    marginLeft: 20,
+                  }} fontSize={theme.sizes.headerFontSize}>
                 &
               </Typography>
               <Typography style={{fontFamily: 'Pinyon Script'}} fontSize={theme.sizes.headerFontSize}>
                 Brunna
               </Typography>
-            </div>
           </div>
         ) : (
           <div style={{display: 'flex', height: 64, alignItems: 'center'}}>

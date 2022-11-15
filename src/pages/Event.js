@@ -20,13 +20,13 @@ export default function Event() {
           <Countdown />     
       </div>
       
+      {/* 
       <div style={{
         display: 'flex',
         justifyContent: 'center',
       }}>
         <Divider color={theme.customColors.rose}/>
       </div>
-
       <Box sx={{ display: { xs: 'block', md: 'none' } }} 
         style={{
           paddingTop: 20,
@@ -85,7 +85,7 @@ export default function Event() {
           </TimeEventNodeHorizontal>
         </div>
       </Box>
-
+*/}
       <div style={{
         display: 'flex',
         justifyContent: 'center',

@@ -62,7 +62,7 @@ const theme = {
         return style
     },
     sizes: {
-        headerFontSize: 80,
+        headerFontSize: 48,
         headerFontSizeSmall: 36,
     },
     customColors,
