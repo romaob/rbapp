@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/rbapp/static/css/main.76aa2a5a.css",
-    "main.js": "/rbapp/static/js/main.c4f02dfd.js",
-    "static/js/787.9544144c.chunk.js": "/rbapp/static/js/787.9544144c.chunk.js",
-    "static/media/rb-logo-blue.png": "/rbapp/static/media/rb-logo-blue.bb5acc502760ff7370a0.png",
-    "index.html": "/rbapp/index.html",
-    "main.76aa2a5a.css.map": "/rbapp/static/css/main.76aa2a5a.css.map",
-    "main.c4f02dfd.js.map": "/rbapp/static/js/main.c4f02dfd.js.map",
-    "787.9544144c.chunk.js.map": "/rbapp/static/js/787.9544144c.chunk.js.map"
+    "main.css": "/static/css/main.76aa2a5a.css",
+    "main.js": "/static/js/main.c8063e2a.js",
+    "static/js/787.9544144c.chunk.js": "/static/js/787.9544144c.chunk.js",
+    "static/media/rb-logo-blue.png": "/static/media/rb-logo-blue.bb5acc502760ff7370a0.png",
+    "index.html": "/index.html",
+    "main.76aa2a5a.css.map": "/static/css/main.76aa2a5a.css.map",
+    "main.c8063e2a.js.map": "/static/js/main.c8063e2a.js.map",
+    "787.9544144c.chunk.js.map": "/static/js/787.9544144c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.76aa2a5a.css",
-    "static/js/main.c4f02dfd.js"
+    "static/js/main.c8063e2a.js"
   ]
 }
