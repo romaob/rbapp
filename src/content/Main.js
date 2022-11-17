@@ -2,16 +2,26 @@ import { Typography } from '@mui/material'
 import React from 'react'
 import Logo from '../components/Logo'
 import Construction from './Construction'
+import Top from './Top'
 
 export default function Main() {
   return (
     <div style={{
-        display: 'flex',
-        flex: 1,
+        width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
-    }}>
-        <Construction />
+        flexDirection: 'column',
+    }}>    
+        <Top />
+        <Logo />
+        <Logo />
+        <Logo />
+        <Logo />
+        <Logo />
+        <Logo />
+        <Logo />
+        <Logo />
+        <Logo />
     </div>
   )
 }

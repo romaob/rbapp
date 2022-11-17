@@ -62,8 +62,10 @@ const theme = {
         return style
     },
     sizes: {
-        headerFontSize: 48,
-        headerFontSizeSmall: 36,
+        headerFontSize: 96,
+        headerFontSizeSmall: '13vw',
+        title: 28,
+        subtitle: 22,
     },
     customColors,
     /*
