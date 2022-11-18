@@ -27,9 +27,8 @@ export default function Date() {
             >
                 Apenas mais alguns...
             </Typography>
-            <div style={{marginLeft: 20, marginRight: 20}}>
                 <Countdown fontColor={theme.customColors.textContrast} backgroundColor={'transparent'}/>
-            </div>
+    
             <Typography 
                 style={styles.message}
                 fontFamily={'Pinyon Script'}
@@ -56,6 +55,8 @@ const styles = {
         margin: 15,
         maxWidth: 650,
         textAlign: 'center',
+        marginLeft: 15,
+        marginRight: 15,
     },
     countdownContainer: {
         display: 'flex',

@@ -4,6 +4,7 @@ import theme from '../values/theme'
 
 //Full height TOP, with the main logo and info, and a static background
 //* Still need to animate the information fading in
+//* It must change to 'Just Married' after the wedding date
 export default function Top() {
   return (
     <div style={{

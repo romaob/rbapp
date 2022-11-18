@@ -9,6 +9,11 @@ import Date from './Date'
 import Event from './Event'
 import Story from './Story'
 import Numbers from './Numbers'
+import Gallery from './Gallery'
+import Bottom from './Bottom'
+
+//* Making itens fade in as they scroll into view
+//* Add fixed menu and drawer menu
 
 export default function Main() {
   return (
@@ -34,7 +39,12 @@ export default function Main() {
         <Section title={'O evento'}>
           <Event />
         </Section>
-        <Section />
+        <Section title={'Galeria'}>
+          <Gallery />
+        </Section>
+        <Section dark>
+          <Bottom />
+        </Section>
     </div>
   )
 }
