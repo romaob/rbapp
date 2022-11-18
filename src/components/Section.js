@@ -2,7 +2,7 @@ import { Typography } from '@mui/material'
 import React from 'react'
 import theme from '../values/theme'
 
-export default function Section({title, dark, style, children}) {
+export default function Section({title, dark, style, children, image}) {
   return (
     <div style={{
         width: '100%',
@@ -16,6 +16,9 @@ export default function Section({title, dark, style, children}) {
         paddingRight: 15,
         backgroundColor: dark ? theme.customColors.backgroundContrast : 'transparent',
         color: dark ? theme.customColors.textContrast : theme.customColors.textMain,
+        backgroundImage: image ? `url(${image})` : 'none',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         ...style,
     }}>
         {title &&

@@ -5,7 +5,7 @@ import theme from '../values/theme'
 //Full height TOP, with the main logo and info, and a static background
 //* Still need to animate the information fading in
 //* It must change to 'Just Married' after the wedding date
-export default function Top() {
+export default function Top({image}) {
   return (
     <div style={{
         width: '100%',
@@ -18,6 +18,7 @@ export default function Top() {
         {/* Static Background*/}
         <div style={{
             backgroundColor: '#000',
+            backgroundImage: `url(${image})`, //Example image
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',

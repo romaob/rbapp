@@ -23,17 +23,17 @@ export default function Main() {
         alignItems: 'center',
         flexDirection: 'column',
     }}>    
-        <Top />
+        <Top image={'https://html.fairytheme.studio/belle/img/header-bg.jpg'} />
         <Section title={'Olá!'}>
           <About />
         </Section>
-        <Section dark title={'O grade dia'}>
+        <Section dark title={'O grade dia'} image={'https://html.fairytheme.studio/belle/img/header-bg.jpg'}>
           <Date />
         </Section>
         <Section title={'A nossa história'}>
           <Story />
         </Section>
-        <Section dark>
+        <Section dark image={'https://html.fairytheme.studio/belle/img/header-bg.jpg'}>
           <Numbers />
         </Section>
         <Section title={'O evento'}>
@@ -42,7 +42,7 @@ export default function Main() {
         <Section title={'Galeria'}>
           <Gallery />
         </Section>
-        <Section dark>
+        <Section dark image={'https://html.fairytheme.studio/belle/img/header-bg.jpg'}>
           <Bottom />
         </Section>
     </div>
