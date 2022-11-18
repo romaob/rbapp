@@ -49,7 +49,7 @@ export default function Logo() {
           marginBottom: 10,
           borderColor: theme.customColors.textContrast,
       }}></div>
-      <Typography fontSize={theme.sizes.title}>
+      <Typography fontSize={theme.sizes.subtitle}>
         {strings.date_plain}
       </Typography>
     </div>

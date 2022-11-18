@@ -4,8 +4,8 @@ let style = 'light'
 
 const light = {    
     typography: {
-        fontFamily: 'Quicksand, Roboto, sans-serif',
-        fontSize: 16,
+        fontFamily: 'Lato, Quicksand, Roboto, sans-serif',
+        fontSize: 20,
     },
     palette:{
         mode: 'light',
@@ -20,8 +20,8 @@ const light = {
             default: "#EEF1F6"
         },
         text: {
-            primary: "#3D3D3D",
-            secondary: "#3D3D3D"
+            primary: "#20243e",
+            secondary: "#404460"
         }        
     }, 
 }
@@ -64,8 +64,8 @@ const theme = {
     sizes: {
         headerFontSize: 96,
         headerFontSizeSmall: '13vw',
-        title: 28,
-        subtitle: 22,
+        title: 52,
+        subtitle: 28,
     },
     customColors,
     /*

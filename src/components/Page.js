@@ -1,7 +1,6 @@
 import React from 'react';
 import Menu from './Menu';
 
-//import headerBg1 from '../images/testimages/torre.jpeg'
 import Logo from './Logo';
 import theme from '../values/theme';
 import { Paper, Typography } from '@mui/material';
@@ -9,8 +8,6 @@ import { Paper, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import strings from '../values/strings';
 import values from '../values';
-
-//const headerBg1 = 'https://iso.500px.com/wp-content/uploads/2014/07/big-one.jpg';
 
 export function Title({children}) {
     return (

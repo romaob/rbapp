@@ -3,7 +3,7 @@ import Logo from '../components/Logo'
 import theme from '../values/theme'
 
 //Full height TOP, with the main logo and info, and a static background
-
+//* Still need to animate the information fading in
 export default function Top() {
   return (
     <div style={{

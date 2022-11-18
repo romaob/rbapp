@@ -3,6 +3,7 @@ const strings = {
     title_short : "Romão & Brunna",
     title_micro : "R e B",
     date_plain: "06 de Maio de 2023",
+    date_dot: "06 . Maio . 2023",
     date_short: "06/05/2023"
 }
 

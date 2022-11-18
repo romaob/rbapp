@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import React from 'react'
 import values from '../values'
 import theme from '../values/theme'
@@ -12,13 +13,12 @@ function CountDownItem(props) {
             flexDirection: 'column',
             alignItems: 'center',
             margin: 5,
+            marginLeft: 10,
+            marginRight: 10,
         }}>
             <div style={{
-              fontSize: 32, 
               width: '100%',
-              height: 75,
               display: 'flex',
-              fontWeight: 'bold', 
               alignItems: 'center',
               justifyContent: 'center',
               boxShadow: bordered ? 'none' : '0px 2px 5px 0px rgba(0,0,0,0.2)',
@@ -27,9 +27,13 @@ function CountDownItem(props) {
               color: fontColor ?? theme.customColors.textContrast,
               backgroundColor: bordered ? 'transparent' : backgroundColor ?? theme.customColors.rose,}}
             >
-              {value}
+              <Typography fontSize={theme.sizes.title}>{value < 10 ? `0${value}` : value}</Typography>
             </div>
-            <div style={{fontSize: 16, color: bordered ? fontColor : backgroundColor}}>{label}</div>
+            <div style={{fontSize: 16, color: bordered ? backgroundColor : fontColor}}>
+              <Typography>
+                {label}
+              </Typography>
+            </div>
         </div>
     )
 }
