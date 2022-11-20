@@ -4,7 +4,8 @@ const routes = {
    EVENT: '/event',
    CONFIRMATION: '/confirmation',
    GIFTS_LIST: '/giftslist',
-   BLOG: '/blog'
+   BLOG: '/blog',
+   GALLERY: '/gallery'
 }
 
 export default routes;

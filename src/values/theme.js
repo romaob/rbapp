@@ -66,6 +66,7 @@ const theme = {
         headerFontSizeSmall: '13vw',
         title: 52,
         subtitle: 28,
+        small: 18,
     },
     customColors,
     /*

@@ -6,6 +6,9 @@ const values = {
     },
     event_date: new Date('2023-05-06 17:30'),
     initial_date: new Date('2016-08-07 00:00'),
+    instagramURL: 'https://www.instagram.com/romaoebrunna/',
+    facebookURL: 'https://www.facebook.com/romaoebrunna/',
+    tiktokURL: 'https://www.tiktok.com/@romaoebrunna',
 }
 
 export default values;

@@ -33,8 +33,8 @@ export function Items({style, onSelect, align, dark}) {
         <MenuItem label={'Home'} onClick={() => {scroll.scrollToTop(); onSelect()}} align={align} dark={dark}/>
         <MenuItem label={'História'} linkTo={routes.ABOUT} onClick={onSelect} align={align} dark={dark}/>
         <MenuItem label={'Evento'}  linkTo={routes.EVENT} onClick={onSelect} align={align} dark={dark}/>
-        <MenuItem label={'Galeria'}  linkTo={routes.CONFIRMATION} align={align} dark={dark}/>
-        <MenuItem label={'Contato'}  linkTo={routes.CONFIRMATION} align={align} dark={dark}/>
+        <MenuItem label={'Galeria'}  linkTo={routes.GALLERY} onClick={onSelect} align={align} dark={dark}/>
+        <MenuItem label={'Contato'}  onClick={() => {scroll.scrollToBottom(); onSelect()}} align={align} dark={dark}/>
     </div>
   )
 }
@@ -97,6 +97,7 @@ export default function Menu() {
                 boxShadow: '0px 4px 4px rgba(0,0,0,0.1)',
                 position: 'fixed',
                 alignItems: 'flex-start',
+                zIndex: 100,
                 top: 0,
                 left: 0,
               }}>
