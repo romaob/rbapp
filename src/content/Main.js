@@ -14,8 +14,6 @@ import Gallery from './Gallery'
 import Bottom from './Bottom'
 import routes from '../values/routes'
 
-//* Making itens fade in as they scroll into view
-//* Add fixed menu and drawer menu
 //* Make the page LOADING while the images are loading
 
 //* Add real images

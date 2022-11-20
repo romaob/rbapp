@@ -30,9 +30,9 @@ function MiniMenuToggle({toggleMenu, dark}) {
 export function Items({style, onSelect, align, dark}) {
   return (
     <div style={style}>
-        <MenuItem label={'Home'} linkTo={routes.HOME} onClick={() => scroll.scrollToTop()} align={align} dark={dark}/>
-        <MenuItem label={'História'} linkTo={routes.ABOUT} align={align} dark={dark}/>
-        <MenuItem label={'Evento'}  linkTo={routes.EVENT} align={align} dark={dark}/>
+        <MenuItem label={'Home'} onClick={() => {scroll.scrollToTop(); onSelect()}} align={align} dark={dark}/>
+        <MenuItem label={'História'} linkTo={routes.ABOUT} onClick={onSelect} align={align} dark={dark}/>
+        <MenuItem label={'Evento'}  linkTo={routes.EVENT} onClick={onSelect} align={align} dark={dark}/>
         <MenuItem label={'Galeria'}  linkTo={routes.CONFIRMATION} align={align} dark={dark}/>
         <MenuItem label={'Contato'}  linkTo={routes.CONFIRMATION} align={align} dark={dark}/>
     </div>
@@ -110,7 +110,7 @@ export default function Menu() {
           </Fade>
         
 
-        <DrawerMenu onClose={() => setShowDrawer(false)} visible={showDrawer} navigate={navigate} />
+        <DrawerMenu onClose={() => setShowDrawer(false)} visible={showDrawer} navigate={() => setShowDrawer(false)} />
     </div>
   )
 }

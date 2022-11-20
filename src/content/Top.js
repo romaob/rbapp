@@ -1,6 +1,8 @@
 import React from 'react'
+import { Element } from 'react-scroll/modules'
 import Logo from '../components/Logo'
 import Menu from '../components/Menu'
+import routes from '../values/routes'
 import theme from '../values/theme'
 
 //Full height TOP, with the main logo and info, and a static background
