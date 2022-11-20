@@ -1,23 +1,28 @@
-import { Box, Button, IconButton } from '@mui/material'
+import { Box, Button, Fade, IconButton } from '@mui/material'
 import React from 'react'
 import routes from '../values/routes'
 import DrawerMenu from './DrawerMenu'
 import MenuItem from './MenuItem'
 import MenuIcon from '@mui/icons-material/Menu';
+import * as Scroll from 'react-scroll';
 import { useHistory, useNavigate } from "react-router-dom";
 import theme from '../values/theme'
 
-function MiniMenuToggle({toggleMenu}) {
+const scroll = Scroll.animateScroll;
+
+function MiniMenuToggle({toggleMenu, dark}) {
   return (
     <IconButton
-      style={{position: 'absolute', top: 5, left: 20}}
+      style={{
+        borderRadius: 100,
+      }}
       color="inherit"
       aria-label="Menu"
       edge="start"
       onClick={toggleMenu}
       sx={{ mr: 2, display: { md: 'none' } }}
     >
-      <MenuIcon color='secondary' sx={{ fontSize: 36 }}/>
+      <MenuIcon color={dark ? 'primary' : 'secondary'} sx={{ fontSize: 36 }}/>
     </IconButton>
   )
 }
@@ -25,12 +30,11 @@ function MiniMenuToggle({toggleMenu}) {
 export function Items({style, onSelect, align, dark}) {
   return (
     <div style={style}>
-        <MenuItem label={'Home'} onClick={() => onSelect(routes.HOME)} align={align} dark={dark}/>
-        <MenuItem label={'Nossa História'} onClick={() => onSelect(routes.ABOUT)} align={align} dark={dark}/>
-        <MenuItem label={'O Evento'}  onClick={() => onSelect(routes.EVENT)} align={align} dark={dark}/>
-        <MenuItem label={'Confirmar Presença'}  onClick={() => onSelect(routes.CONFIRMATION)} align={align} dark={dark}/>
-        <MenuItem label={'Lista de Presentes'}  onClick={() => onSelect(routes.GIFTS_LIST)} align={align}dark={dark}/>
-        <MenuItem label={'Recados'}  onClick={() => onSelect(routes.BLOG)} align={align} dark={dark}/>
+        <MenuItem label={'Home'} linkTo={routes.HOME} onClick={() => scroll.scrollToTop()} align={align} dark={dark}/>
+        <MenuItem label={'História'} linkTo={routes.ABOUT} align={align} dark={dark}/>
+        <MenuItem label={'Evento'}  linkTo={routes.EVENT} align={align} dark={dark}/>
+        <MenuItem label={'Galeria'}  linkTo={routes.CONFIRMATION} align={align} dark={dark}/>
+        <MenuItem label={'Contato'}  linkTo={routes.CONFIRMATION} align={align} dark={dark}/>
     </div>
   )
 }
@@ -38,19 +42,74 @@ export function Items({style, onSelect, align, dark}) {
 export default function Menu() {
   const navigate = useNavigate();
   const [showDrawer, setShowDrawer] = React.useState(false);
+  const [showMenuBar, setShowMenuBar] = React.useState(false);
+
+  function onScrollChange(e) {
+    if (window.scrollY >= window.innerHeight) {
+      setShowMenuBar(true);
+    } else {
+      setShowMenuBar(false);
+    }
+  }
+
+  React.useEffect(() => {
+    window.addEventListener('scroll', onScrollChange);
+    return () => window.removeEventListener('scroll', onScrollChange);
+  }, [])
 
   return (
-    <div style={{minHeight: 0}}>
-        {!showDrawer &&
-          <MiniMenuToggle toggleMenu={() => setShowDrawer(!showDrawer)}/>
+    <div style={{
+        minHeight: 0, 
+        width: '100%',
+      }}>
+        {!showMenuBar &&
+          <Fade in={!showMenuBar} timeout={1000}>
+            <div>
+              <div style={{
+                display: 'flex',
+                alignItems: 'flex-start',
+                paddingLeft: 20,
+              }}>
+                <MiniMenuToggle toggleMenu={() => setShowDrawer(!showDrawer)} dark={showMenuBar} />
+              </div>
+              <Box sx={{ display: { xs: 'none', md: 'block' } }} 
+                style={{
+                  paddingLeft: 20, 
+                  paddingRight: 20,
+                }}>
+                <Items dark={!showMenuBar} style={{
+                  display: 'flex', 
+                }} onSelect={navigate}/>
+              </Box>
+            </div>
+          </Fade>
         }
-        <Box sx={{ display: { xs: 'none', md: 'block' } }} style={{paddingLeft: 20, paddingRight: 20}}>
-          <Items dark style={{
-            display: 'flex', 
-            alignContent: 'center', 
-            justifyContent: 'center', 
-          }} onSelect={navigate}/>
-        </Box>
+        
+          <Fade in={showMenuBar} timeout={500}>
+            <div
+              style={{
+                display: 'flex',
+                width: '100%',
+                paddingLeft: 20, 
+                paddingRight: 20,
+                backgroundColor: theme.customColors.background,
+                borderBottom: '1px solid #CCC',
+                boxShadow: '0px 4px 4px rgba(0,0,0,0.1)',
+                position: 'fixed',
+                alignItems: 'flex-start',
+                top: 0,
+                left: 0,
+              }}>
+                <MiniMenuToggle toggleMenu={() => setShowDrawer(!showDrawer)} dark={showMenuBar} />
+                <Box sx={{ display: { xs: 'none', md: 'block' } }} >
+                  <Items dark={!showMenuBar} style={{
+                    display: 'flex', 
+                  }} onSelect={navigate}/>
+                </Box>
+            </div>
+          </Fade>
+        
+
         <DrawerMenu onClose={() => setShowDrawer(false)} visible={showDrawer} navigate={navigate} />
     </div>
   )

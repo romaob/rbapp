@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from '../components/Logo'
+import Menu from '../components/Menu'
 import theme from '../values/theme'
 
 //Full height TOP, with the main logo and info, and a static background
@@ -29,6 +30,9 @@ export default function Top({image}) {
             position: 'absolute',
             zIndex: -1,            
         }}></div>
+
+        {/* Menu */}
+        <Menu />
 
         {/* Top Spacer*/}
         <div style={{

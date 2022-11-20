@@ -13,7 +13,7 @@ const light = {
             main: '#274C8F',
         },
         secondary: {
-            main: "#eb949e"
+            main: "#FFF"
         },
         background: {
             paper: "#FFFFFF",
@@ -33,7 +33,7 @@ const dark = {
             main: amber[400]
         },
         secondary: {
-            main: grey["A700"]
+            main: '#FFF'
         },
         background: {
             paper: grey[900],

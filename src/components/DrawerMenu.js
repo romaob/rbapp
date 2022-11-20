@@ -15,6 +15,7 @@ export default function DrawerMenu({visible, onClose, navigate}) {
         style={{
           display: 'flex', 
           flexDirection: 'column',
+          minWidth: 200,
         }}/>
     </Drawer>
   )

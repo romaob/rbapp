@@ -49,7 +49,8 @@ const styles = {
         alignItems: 'center',
     },
     date: {
-        fontSize: '6vmax'
+        fontSize: '6vmax',
+        textShadow: '0px 4px 4px rgba(0,0,0,0.4)',
     },
     message: {
         margin: 15,
@@ -57,6 +58,7 @@ const styles = {
         textAlign: 'center',
         marginLeft: 15,
         marginRight: 15,
+        textShadow: '0px 4px 4px rgba(0,0,0,0.4)',
     },
     countdownContainer: {
         display: 'flex',

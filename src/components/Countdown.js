@@ -15,14 +15,13 @@ function CountDownItem(props) {
             margin: 5,
             marginLeft: 10,
             marginRight: 10,
+            textShadow: '0px 4px 4px rgba(0,0,0,0.4)',
         }}>
             <div style={{
               width: '100%',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              boxShadow: bordered ? 'none' : '0px 2px 5px 0px rgba(0,0,0,0.2)',
-              border: bordered ? `1px solid ${fontColor}` : 'none',
               margin: 5,
               color: fontColor ?? theme.customColors.textContrast,
               backgroundColor: bordered ? 'transparent' : backgroundColor ?? theme.customColors.rose,}}
