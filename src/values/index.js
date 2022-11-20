@@ -9,6 +9,7 @@ const values = {
     instagramURL: 'https://www.instagram.com/romaoebrunna/',
     facebookURL: 'https://www.facebook.com/romaoebrunna/',
     tiktokURL: 'https://www.tiktok.com/@romaoebrunna',
+    locationURL: 'https://goo.gl/maps/JwxD1eUge3PghoXGA',
 }
 
 export default values;

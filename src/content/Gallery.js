@@ -17,7 +17,7 @@ const IMAGES_PARTY = importAll(require.context('../images/gallery/party', false,
 
 const IMAGES_All = [...IMAGES_MOMENTS, ...IMAGES_CERIMONY, ...IMAGES_WEDDING, ...IMAGES_FAMILY, ...IMAGES_FRIENDS, ...IMAGES_PARTY];
 
-const MAX = 10;
+const MAX = 6;
 const categories = {
   ALL: 'Todas',
   MOMENTS: 'Momentos',
@@ -30,16 +30,28 @@ const categories = {
 
 export function GalleryItem({picture, onSelect}) {
   return (
-    <div onClick={onSelect}
-      style={{
-        ...styles.galleryItem,
-        backgroundImage: `url(${picture})`,        
-      }}></div>
+    <Fade in={true} timeout={1000}>
+      <div onClick={onSelect}
+        style={{
+          ...styles.galleryItem,
+          backgroundImage: `url(${picture})`,        
+        }}></div>
+    </Fade>
   )
 }
 
 export function GalleryList({pictures, onIndexChange}) {
-  const display = pictures.slice(0, MAX);
+  const [limit, setLimit] = React.useState(MAX);
+  const [display, setDisplay] = React.useState(pictures.slice(0, MAX));
+
+  React.useEffect(() => {
+    setDisplay(pictures.slice(0, limit));
+  }, [pictures, limit]);
+
+  const handleLoadMore = () => {
+    setLimit(pictures.length);
+  }
+
   return (
     <Fade in={true} timeout={500}>
       <div style={styles.galleryList}>
@@ -47,10 +59,15 @@ export function GalleryList({pictures, onIndexChange}) {
           return <GalleryItem picture={picture} key={index} onSelect={() => onIndexChange(index)}/>
         })}
         <div style={styles.seeMore}>
-          {pictures.length > MAX &&          
-            <Button>
+          {pictures.length > limit &&          
+            <Button onClick={handleLoadMore}>
               {/* +{pictures.length - MAX} */}
               Ver mais...
+            </Button>
+          }
+          {pictures.length <= limit &&
+            <Button onClick={() => setLimit(MAX)}>
+              Ver menos.
             </Button>
           }
         </div>

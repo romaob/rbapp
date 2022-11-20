@@ -47,11 +47,11 @@ export default function Main() {
         <Section title={'A nossa história'} name={routes.ABOUT}>
           <Story />
         </Section>
-        <Section dark image={'https://html.fairytheme.studio/belle/img/header-bg.jpg'}>
-          <Numbers />
-        </Section>
         <Section title={'O evento'} name={routes.EVENT}>
           <Event />
+        </Section>
+        <Section dark image={'https://html.fairytheme.studio/belle/img/header-bg.jpg'}>
+          <Numbers />
         </Section>
         <Section title={'Galeria'} name={routes.GALLERY}>
           <Gallery />
