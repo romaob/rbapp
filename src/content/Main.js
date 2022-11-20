@@ -15,8 +15,16 @@ import Bottom from './Bottom'
 import routes from '../values/routes'
 
 //* Make the page LOADING while the images are loading
-
+//* Create the Gallery component with sections
+//* Improve the bottom component with social media links
 //* Add real images
+//* Make changes triggered by the date > after the wedding date
+//*   Change the top component to 'Just Married' since...
+//*   Change the Countdown to time since the wedding
+//*   Update our story adding the wedding day
+//*   Update the gallery with the wedding photos
+//*   Update event and other texts to past tense
+//*   Translations to English and Spanish?
 //* Complete implementation
 //* Clean code
 //* Publish
