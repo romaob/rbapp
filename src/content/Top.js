@@ -21,7 +21,7 @@ export default function Top({image}) {
         {/* Static Background*/}
         <div style={{
             backgroundColor: '#000',
-            backgroundImage: `url(${image})`, //Example image
+            backgroundImage: `url(${image})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',

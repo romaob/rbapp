@@ -13,11 +13,11 @@ import Numbers from './Numbers'
 import Gallery from './Gallery'
 import Bottom from './Bottom'
 import routes from '../values/routes'
+import Gifts from './Gifts'
 
 //* Make the page LOADING while the images are loading
-//* Create the Gallery component with sections
-//* Improve the bottom component with social media links
-//* Add real images
+//* Add the gifts section
+//* Add our images
 //* Make changes triggered by the date > after the wedding date
 //*   Change the top component to 'Just Married' since...
 //*   Change the Countdown to time since the wedding
@@ -37,26 +37,31 @@ export default function Main() {
         alignItems: 'center',
         flexDirection: 'column',
     }}>    
-        <Top image={'https://html.fairytheme.studio/belle/img/header-bg.jpg'} />
+        <Top image={require('../images/content-images/decklakeedition.png')} />
         <Section title={'Olá!'} name={routes.HOME}>
           <About />
         </Section>
-        <Section dark title={'O grade dia'} image={'https://html.fairytheme.studio/belle/img/header-bg.jpg'}>
+        <Section dark title={'O grade dia'} image={require('../images/content-images/road6.jpeg')}>
           <Date />
         </Section>
         <Section title={'A nossa história'} name={routes.ABOUT}>
           <Story />
         </Section>
+        <Section dark image={require('../images/content-images/bridge5.jpeg')}>
+          <Numbers />
+        </Section>
         <Section title={'O evento'} name={routes.EVENT}>
           <Event />
         </Section>
-        <Section dark image={'https://html.fairytheme.studio/belle/img/header-bg.jpg'}>
-          <Numbers />
+        <Section title={'Lista de presentes'} name={routes.GIFTS} style={{
+          backgroundColor: 'rgba(0,0,0,0.1)',
+        }}>
+          <Gifts />
         </Section>
         <Section title={'Galeria'} name={routes.GALLERY}>
           <Gallery />
         </Section>
-        <Section dark image={'https://html.fairytheme.studio/belle/img/header-bg.jpg'}>
+        <Section dark image={require('../images/content-images/sunset2.jpeg')}>
           <Bottom />
         </Section>
     </div>

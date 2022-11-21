@@ -32,7 +32,7 @@ export default function Logo() {
   return (
     <Fade in={true} timeout={2000}>
       <div style={{
-        textShadow: '0px 4px 10px #000000',
+        textShadow: '0px 4px 4px #000',
       }}>
         {/* Larger Logo */}
         <Box sx={{ display: { xs: 'none', md: 'block' } }}>

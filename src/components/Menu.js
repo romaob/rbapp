@@ -32,7 +32,8 @@ export function Items({style, onSelect, align, dark}) {
     <div style={style}>
         <MenuItem label={'Home'} onClick={() => {scroll.scrollToTop(); onSelect()}} align={align} dark={dark}/>
         <MenuItem label={'História'} linkTo={routes.ABOUT} onClick={onSelect} align={align} dark={dark}/>
-        <MenuItem label={'Evento'}  linkTo={routes.EVENT} onClick={onSelect} align={align} dark={dark}/>
+        <MenuItem label={'O Evento'}  linkTo={routes.EVENT} onClick={onSelect} align={align} dark={dark}/>
+        <MenuItem label={'Lista de presentes'}  linkTo={routes.GIFTS} onClick={onSelect} align={align} dark={dark}/>
         <MenuItem label={'Galeria'}  linkTo={routes.GALLERY} onClick={onSelect} align={align} dark={dark}/>
         <MenuItem label={'Contato'}  onClick={() => {scroll.scrollToBottom(); onSelect()}} align={align} dark={dark}/>
     </div>

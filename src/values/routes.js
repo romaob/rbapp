@@ -5,7 +5,8 @@ const routes = {
    CONFIRMATION: '/confirmation',
    GIFTS_LIST: '/giftslist',
    BLOG: '/blog',
-   GALLERY: '/gallery'
+   GALLERY: '/gallery',
+   GIFTS: '/gifts',
 }
 
 export default routes;

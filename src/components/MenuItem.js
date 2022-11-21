@@ -9,7 +9,6 @@ function MenuItemContent({label, onClick, align, dark, linkTo}) {
     <Button onClick={onClick} color={(dark ? 'secondary' : 'primary')} style={{
       padding: 10,
       margin: 10,
-      maxWidth: 170,
       display: 'flex',
       textAlign: align ?? 'center',
       justifyContent:  align ?? 'center',
