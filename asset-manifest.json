@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f6326b66.css",
-    "main.js": "/static/js/main.6efdf792.js",
+    "main.js": "/static/js/main.a19cae28.js",
     "static/js/787.9544144c.chunk.js": "/static/js/787.9544144c.chunk.js",
     "static/media/2022-12-13-004.jpg": "/static/media/2022-12-13-004.61656364823a8277ce62.jpg",
     "static/media/header-bg.jpg": "/static/media/header-bg.f78a5391f9a14121ce63.jpg",
@@ -13,7 +13,6 @@
     "static/media/2022-12-13-001.jpg": "/static/media/2022-12-13-001.4321ca5fc4545af62af9.jpg",
     "static/media/002.jpg": "/static/media/002.9c4bd33278690f8d8f43.jpg",
     "static/media/2022-12-13-003.jpg": "/static/media/2022-12-13-003.9c4bd33278690f8d8f43.jpg",
-    "static/media/rb-logo-blue.png": "/static/media/rb-logo-blue.bb5acc502760ff7370a0.png",
     "static/media/rb-logo-white.png": "/static/media/rb-logo-white.714bbb45d27dbd8f5526.png",
     "static/media/Infinity-white.gif": "/static/media/Infinity-white.c8e753e949cc6ecc1122.gif",
     "static/media/th-2709130262.jpg": "/static/media/th-2709130262.21ba355d0f101477463c.jpg",
@@ -47,11 +46,11 @@
     "static/media/heart-rose.png": "/static/media/heart-rose.c14942158269e4e9010e.png",
     "index.html": "/index.html",
     "main.f6326b66.css.map": "/static/css/main.f6326b66.css.map",
-    "main.6efdf792.js.map": "/static/js/main.6efdf792.js.map",
+    "main.a19cae28.js.map": "/static/js/main.a19cae28.js.map",
     "787.9544144c.chunk.js.map": "/static/js/787.9544144c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f6326b66.css",
-    "static/js/main.6efdf792.js"
+    "static/js/main.a19cae28.js"
   ]
 }
